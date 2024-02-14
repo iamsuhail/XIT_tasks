@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height:4rem;
+    background-color:#bc5353;
+    
+}
+.hero{
+    background-color: rgb(227, 153, 153);
+    height: 20rem;
+    margin-bottom: 25px;
+
+}
+.grid-container {
+  display: grid;
+  /* background-color: brown; */
+  gap:25px;
+  margin: 30px;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(4,1fr);
+
+}
+.grid-container2 {
+  display: grid;
+  /* background-color: brown; */
+  gap:25px;
+  margin: 30px;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+.grid-item {
+    background-color: #875556;
+  text-align: center;
+  /* padding: 50px; */
+  font-size: 30px;
+  height: 220px;
+}
+.grid-item2 {
+  background-color: rgb(153, 35, 35);
+  text-align: center;
+}
+.item7{
+    height: 240px;
+    background-color: #875556;
+}
+.item8{
+    height: 60px;
+    background-color: #e2a6a6;
+    margin-bottom: 20px;
+}
+.item9{
+    height: 160px;
+    background-color: #ab595b;
+}
+.box{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    
+}
+
+
+</style>
+</head>
+<body>
+
+
+<nav>
+
+</nav>
+<div class="hero">
+
+</div>
+<div class="grid-container">
+  <div class="grid-item item3"></div>  
+  <div class="grid-item item4"></div>
+  <div class="grid-item item5"></div>
+  <div class="grid-item item6"></div>
+
+</div>
+
+<div class="grid-container2">
+    <div class="grid-item2 item7"></div>
+    <div class="box">
+        <div class="grid-item2 item8"></div>
+        <div class="grid-item2 item9"></div>
+      </div>
+</div>
+
+
+
+</body>
+</html>
+
+

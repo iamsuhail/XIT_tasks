@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Task 6 - CRUD </title>
+</head>
+
+<body onload="info()" style="background-color: #f5f6f8;">
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">CRUD Application</h2>
+        <div class="d-flex justify-content-between mb-4">
+            <h5 class="mb-1">Employee Details</h5>
+            <!-- Button trigger modal -->
+            <button type="button" id="add" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add row
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add row</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="ename" class="form-label">Employee Name</label>
+                                    <input type="text" class="form-control" id="ename" aria-describedby="emailHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="eemail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="eemail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emobile" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="emobile" required pattern="^\+?[0-9\s-]{10}$">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid phone number.
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="addRow()" data-bs-dismiss="modal">Submit</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TABLE -->
+        <div class="table-responsive text-center">
+            <table class="table table-bordered" style="background-color: #ffffff;">
+                <thead class="table">
+                    <th scope="col" class="text-light"style="background-color: #74c8d2;">Employee ID</th>
+                    <th scope="col" class="text-light"style="background-color: #74c8d2;">Employee Name</th>
+                    <th scope="col" class="text-light"style="background-color: #74c8d2;">Email</th>
+                    <th scope="col" class="text-light"style="background-color: #74c8d2;">Phone Number</th>
+                    <th scope="col" class="text-light"style="background-color: #74c8d2;">Actions</th>
+                </thead>
+                <tbody id="row">
+                </tbody>
+            </table>
+            
+            <div class="message ">
+                <h2>No Data to be displayed</h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
